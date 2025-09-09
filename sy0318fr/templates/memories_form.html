@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method = "post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type = "submit">New Memory</button>
+</form>
+{% for form in form %}
+<li>{{form.photo.url}}</li>
+{% endfor %}
+{% endblock %}

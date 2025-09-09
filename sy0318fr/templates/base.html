@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Love in Purple</title>
+  <style>
+    body {
+      background: #f3e8ff; /* soft lavender */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #6a0dad; /* dark purple */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.2em;
+      text-shadow: 2px 2px 5px #b19cd9;
+    }
+
+    .heart {
+      font-size: 5rem;
+      color: #9b30ff; /* bright purple */
+      animation: beat 1s infinite;
+      margin-bottom: 1em;
+    }
+
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      max-width: 400px;
+      margin: 0 auto;
+      line-height: 1.4;
+      color: #7e3aa1;
+    }
+
+    footer {
+      margin-top: 2em;
+      font-size: 0.9rem;
+      color: #5d2780;
+    }
+
+    /* Example of purple hyperlink */
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>{% block content %}
+  <div class="heart"><a href = "{% url "home" %}">💜</a></div>
+  <h1>Happy 1 year anniversary, darling!</h1>
+  <p>Thankyou very much for being in my life and making everyday special.</p>
+  <footer>Made with 💜 by Yaju<br>Click the heart</footer>
+  {% endblock %}
+</body>
+</html>
